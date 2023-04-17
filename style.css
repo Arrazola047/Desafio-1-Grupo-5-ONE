@@ -6,19 +6,31 @@ body{
 }
 
 .logo{
-    display: block;
-    position: relative;
-    width:2010px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 40px;
+
+    position: absolute;
+    width: 120px;
+    height: 48px;
+    left: 40px;
     top: 40px;
-    margin: 0 auto;
 }
 
 .cuadroTexto{
-    display: block;
-    margin:auto;
-    position: relative;
-    width: 1000px;
-    top: 120px;
+    position: absolute;
+    width: 577px;
+    height: 480px;
+    left: 240px;
+    top: 168px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
 }
 
 .input{
@@ -27,4 +39,20 @@ body{
     background:transparent;
     border: transparent;
     resize: none;
+
+}
+
+.txtcod{
+
+    display: block;
+    position: relative;
+    width: 400px;
+    height: 944px;
+    left: 1000px;
+    top: 40px;
+
+    background: #FFFFFF;
+
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
 }
