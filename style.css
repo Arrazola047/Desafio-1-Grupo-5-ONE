@@ -44,6 +44,9 @@ body{
 
 .txtcod{
 
+    /* Cambie absolute por relative para que la pagina sea responsiva dependeiendo de en que dispositivo se use
+    aun no termino de configurarlo*/
+
     display: block;
     position: relative;
     width: 400px;
