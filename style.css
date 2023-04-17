@@ -1,0 +1,30 @@
+
+
+body{
+    background: #e5e5e5;
+    font-family: 'Inter', sans-serif;
+}
+
+.logo{
+    display: block;
+    position: relative;
+    width:2010px;
+    top: 40px;
+    margin: 0 auto;
+}
+
+.cuadroTexto{
+    display: block;
+    margin:auto;
+    position: relative;
+    width: 1000px;
+    top: 120px;
+}
+
+.input{
+    font-size: 32px;
+    color: #0A3871;
+    background:transparent;
+    border: transparent;
+    resize: none;
+}
