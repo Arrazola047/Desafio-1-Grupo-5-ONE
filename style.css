@@ -18,12 +18,32 @@ body{
     top: 40px;
 }
 
+.aluralogo{
+    transition: transform 0.5s ease;
+}
+
+.aluralogo:hover{
+    transform: scale(1.05);
+}
+
+.aluralogo:active{
+    transform: scale(1.15);
+}
+
 .linkedlogo{
     position: absolute;
     width: 30px;
     top: 10px;
     left: 100px;
+    transition: transform 0.5s ease;
+}
 
+.linkedlogo:hover{
+    transform: scale(1.05);
+}
+
+.linkedlogo:active{
+    transform: scale(1.15);
 }
 
 .gitlogo{
@@ -31,6 +51,15 @@ body{
     width: 30px;
     top: 10px;
     left: 150px;
+    transition: transform 0.5s ease;
+}
+
+.gitlogo:hover{
+    transform: scale(1.05);
+}
+
+.gitlogo:active{
+    transform: scale(1.15);
 }
 
 .cuadroTexto{
