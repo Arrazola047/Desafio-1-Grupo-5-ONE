@@ -82,6 +82,7 @@ body{
     background:transparent;
     border: transparent;
     resize: none;
+    outline: none;
 
 }
 

@@ -1,7 +1,10 @@
+var textoentrada= document.querySelector("cuadro");
+
 function encriptar(encriptado){
-    var texto = document.getElementById("cuadro");
+    var texto = textoentrada.value;
     console.log(texto);
-    var encriptado = texto.replace("a","ai");
+    var encriptado = texto.replace(/ai/img,"a")
+    var encriptado = texto.replaceAll("a","ai");
     console.log(encriptado);
 
     document.getElementById("resuelto").innerHTML = encriptado;
