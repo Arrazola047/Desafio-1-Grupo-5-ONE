@@ -11,12 +11,26 @@ body{
     align-items: flex-start;
     padding: 0px;
     gap: 40px;
-
     position: absolute;
-    width: 120px;
+    width: 280px;
     height: 48px;
     left: 40px;
     top: 40px;
+}
+
+.linkedlogo{
+    position: absolute;
+    width: 30px;
+    top: 10px;
+    left: 100px;
+
+}
+
+.gitlogo{
+    position: absolute;
+    width: 30px;
+    top: 10px;
+    left: 150px;
 }
 
 .cuadroTexto{
