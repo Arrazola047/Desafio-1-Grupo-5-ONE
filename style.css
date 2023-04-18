@@ -113,6 +113,7 @@ body{
     display: inline-block;
     text-align: center;
     line-height: 65px;
+    font-weight: bold;
     color: #d8dfe8;
     background-color: #0A3871;
     width: 328px;
@@ -125,9 +126,15 @@ body{
     display: inline-block;
     text-align: center;
     line-height: 65px;
+    font-weight: bold;
     color: #0A3871;
     background-color: #d8dfe8;
     width: 328px;
     height: 67px;
     border-radius: 32px;
+}
+
+.desencriptar:hover{
+    background-color: #164f94;
+    transform: scale(1.20)px;
 }
