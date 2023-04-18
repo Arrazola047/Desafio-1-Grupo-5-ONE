@@ -110,31 +110,55 @@ body{
 }
 
 .encriptar{
-    display: inline-block;
-    text-align: center;
-    line-height: 65px;
-    font-weight: bold;
+    font-size: large;
     color: #d8dfe8;
     background-color: #0A3871;
     width: 328px;
     height: 67px;  
     border-radius: 32px;
     margin-right: 24px;
+    border: none;
+    transition: transform 0.5s ease
 }
 
 .desencriptar{
-    display: inline-block;
-    text-align: center;
-    line-height: 65px;
-    font-weight: bold;
+    font-size: large;
     color: #0A3871;
     background-color: #d8dfe8;
     width: 328px;
     height: 67px;
     border-radius: 32px;
+    border:none;
+    transition: transform 0.5s ease;
+}
+
+.encriptar:hover{
+    transform: scale(1.05);
+}
+
+.encriptar:active{
+    transform: scale(1.15);
 }
 
 .desencriptar:hover{
-    background-color: #164f94;
-    transform: scale(1.20)px;
+    transform: scale(1.05);
+}
+
+.desencriptar:active{
+    transform: scale(1.15);
+}
+
+.alert{
+    font-size: smaller;
+    color: gray;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+    position: absolute;
+    width: 240px;
+    height: 18px;
+    left: 240px;
+    top: 851px;
 }
