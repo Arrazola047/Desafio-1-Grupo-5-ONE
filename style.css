@@ -85,3 +85,49 @@ body{
 .lista{
     text-align: center;
 }
+
+.txtResaltado{
+    font-size: large;
+    font-weight: bold;
+    padding-bottom: 16px;
+    padding-top: 16px;
+}
+
+.botones{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+
+    position: absolute;
+    width: 680px;
+    height: 67px;
+    left: 240px;
+    top: 885px;
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.encriptar{
+    display: inline-block;
+    text-align: center;
+    line-height: 65px;
+    color: #d8dfe8;
+    background-color: #0A3871;
+    width: 328px;
+    height: 67px;  
+    border-radius: 32px;
+    margin-right: 24px;
+}
+
+.desencriptar{
+    display: inline-block;
+    text-align: center;
+    line-height: 65px;
+    color: #0A3871;
+    background-color: #d8dfe8;
+    width: 328px;
+    height: 67px;
+    border-radius: 32px;
+}
