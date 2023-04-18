@@ -19,8 +19,16 @@
                 <a href="https://github.com/Arrazola047"><img src="Imagenes/github.png" alt="Mi Github" class="gitlogo"></a>
             </div>
         </header>
-        <div class="cuadroTexto">
-            <textarea id="cuadro" cols="25" rows="15" class="input" required placeholder="Ingrese el texto aquí" autofocus></textarea>
+        <div class="cuadroTexto" id="cdtxt">
+            <!--
+            <input type="text" id="cuadro" cols="25" rows="15" class="input" required placeholder="Ingrese el texto aquí" autofocus>
+             -->
+            <textarea type="text" id="cuadro" cols="25" rows="15" class="input" required placeholder="Ingrese el texto aquí" autofocus></textarea>
+           
+        </div>
+        <script type="text/javascript" src="script.js"></script>
+        <div class="txtresuelo">
+            <textarea  id="resuelto" cols="30" rows="10" class="textoResuelto" required placeholder="0'"></textarea>
         </div>
         <div class="txtcod">   
             <div class="imgCuadro">
@@ -36,11 +44,32 @@
             </div>
         </div>
         <div class="botones">
-            <input type="submit" value="Encriptar" class="encriptar">
-            <input type="submit" value="Desencriptar" class="desencriptar">
+            <button type="button" onclick="encriptar()" class="encriptar" id="enc">Encriptar</button>
+            <button type="button" class="desencriptar" id="desen">Desencriptar</button>
+            <script>
+                /*
+                function encriptar(){
+
+                    var texto = document.getElementById("cuadro").value.toLowerCase();
+
+                    var encriptado = texto.replace(/a/img,"ai");
+                    var encriptado = encriptado.replace(/e/img,"enter");
+                    var encriptado = encriptado.replace(/i/img,"imes");
+                    var encriptado = encriptado.replace(/o/img,"ober");
+                    var encriptado = encriptado.replace(/u/img,"ufat");
+
+                    document.getElementById(resuelto).innerHTML = encriptado;
+}
+                var boton = document.querySelector("#enc");
+                boton.onclick = encriptar;
+
+                var botond = document.querySelector("#desen")
+                botond.onclick = desencriptar;*/
+            </script>
         </div>
         <div class="alert">
             &#9888; Solo letras minúsculas y sin acentos
         </div>
+        
     </body>
 </html>
