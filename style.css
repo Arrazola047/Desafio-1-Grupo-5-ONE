@@ -61,22 +61,23 @@ body{
 .gitlogo:active{
     transform: scale(1.15);
 }
-
+/*
 .cuadroTexto{
     position: absolute;
     width: 577px;
     height: 480px;
     left: 240px;
     top: 168px;
-
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 150%;
 }
+*/
 
 .input{
+    display: flex;
+    position: absolute;
+    left: auto;
+    right: 623px;
+    top: 168px;
+    margin-right: 183px;
     font-size: 32px;
     color: #0A3871;
     background:transparent;
@@ -89,13 +90,14 @@ body{
 
     /* Cambie absolute por relative para que la pagina sea responsiva dependeiendo de en que dispositivo se use
     aun no termino de configurarlo*/
-
     display: block;
-    position: relative;
+    position: absolute;
     width: 400px;
     height: 944px;
-    left: 1000px;
+    left: auto;
+    right: 40px;
     top: 40px;
+    margin-bottom: 40px;
 
     background: #FFFFFF;
 
@@ -107,8 +109,8 @@ body{
     position: absolute;
     width: 336px;
     height: 304px;
-    left: 1032px;
-    top: 283px;
+    left: 32px;
+    top: 243px;
 }
 
 .Frame{
@@ -121,8 +123,8 @@ body{
     position: absolute;
     width: 336px;
     height: 122px;
-    left: 1032px;
-    top: 619px;
+    left: 32px;
+    bottom: 243px;
     }
 
 .lista{
@@ -146,7 +148,8 @@ body{
     position: absolute;
     width: 680px;
     height: 67px;
-    left: 240px;
+    left: auto;
+    right: 520px;
     top: 885px;
 
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -202,6 +205,7 @@ body{
     position: absolute;
     width: 240px;
     height: 18px;
-    left: 240px;
+    left: auto;
+    right: 971px;
     top: 851px;
 }
