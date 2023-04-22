@@ -5,23 +5,33 @@ body{
     font-family: 'Inter', sans-serif;
 }
 
+.contenedorGlobal{
+    background-color: black;
+    width: 100%;
+    /*
+    max-width: 1000px;*/
+    /*margin: 0 auto;*/ /*Se elimino para que no centre demasiado los objetos*/
+    overflow:hidden;
+}
+
 .logo{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 40px;
-    position: absolute;
+    display: inline-block;
+    padding: 15px;
+    /*position: absolute;*/ /*Se elimino de todos lados por que ignoraba el div central*/
     width: 280px;
     height: 48px;
-    left: 40px;
-    top: 40px;
+    margin: 0px 0px 0px 0px;
 }
 
 .aluralogo{
     transition: transform 0.5s ease;
 }
-
+/*
+.vinculoalura{
+    width: 30px;
+    height: 30px;
+}
+*/
 .aluralogo:hover{
     transform: scale(1.05);
 }
@@ -31,10 +41,14 @@ body{
 }
 
 .linkedlogo{
-    position: absolute;
+   /* position: absolute;*/
     width: 30px;
+    /*
     top: 10px;
     left: 100px;
+    */
+    margin-bottom: 5px;
+    margin-right: 5px;
     transition: transform 0.5s ease;
 }
 
@@ -47,10 +61,13 @@ body{
 }
 
 .gitlogo{
-    position: absolute;
+   /* position: absolute;*/
     width: 30px;
+    /*
     top: 10px;
     left: 150px;
+    */
+    margin-bottom: 5px;
     transition: transform 0.5s ease;
 }
 
@@ -71,12 +88,19 @@ body{
 }
 */
 
+.cuadroTexto{
+    display: inline-block;
+    margin-top: 6%;
+    margin-left: 13%;
+}
+
 .input{
-    position: absolute;
+    /*position: absolute;
     left: auto;
     right: 623px;
     top: 168px;
     margin-right: 183px;
+    */
     font-size: 32px;
     color: #0A3871;
     background:transparent;
@@ -90,27 +114,31 @@ body{
 
     /* Cambie absolute por relative para que la pagina sea responsiva dependeiendo de en que dispositivo se use
     aun no termino de configurarlo*/
-    display: block;
-    position: absolute;
-    width: 400px;
-    height: 944px;
+    display: inline-block;
+   /* position: absolute;*/
+    /*width: 400px;*/
+    height: 910px;
+    /*
     left: auto;
     right: 40px;
     top: 40px;
+    */
     margin-bottom: 40px;
-
     background: #FFFFFF;
-
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
 }
 
 .imgCuadro{
-    position: absolute;
+   /* position: absolute;*/
     width: 336px;
     height: 304px;
+    /*
     left: 32px;
     top: 243px;
+    */
+    margin-top: 50%;
+    margin-bottom: 32px;
 }
 
 .Frame{
@@ -120,7 +148,7 @@ body{
     padding: 0px;
     gap: 16px;
 
-    position: absolute;
+   /* position: absolute;*/
     width: 336px;
     height: 122px;
     left: 32px;
@@ -145,7 +173,7 @@ body{
     padding: 0px;
     gap: 24px;
 
-    position: absolute;
+    /*position: absolute;*/
     width: 680px;
     height: 67px;
     left: auto;

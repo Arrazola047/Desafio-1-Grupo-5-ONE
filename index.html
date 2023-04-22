@@ -12,64 +12,38 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header>
-            <div class="logo">
-                <a href="https://app.aluracursos.com"><img src="Imagenes/Logo.png" alt="Logotipo Alura" class="aluralogo"></a>
-                <a href="https://www.linkedin.com/in/arrazola-marquez/"><img src="Imagenes/linkedin.png" alt="Mi linkedin" class="linkedlogo"></a>
-                <a href="https://github.com/Arrazola047"><img src="Imagenes/github.png" alt="Mi Github" class="gitlogo"></a>
+        <div class="contenedorGlobal">
+            <header>
+                <div class="logo">
+                    <a href="https://app.aluracursos.com"><img src="Imagenes/Logo.png" alt="Logotipo Alura" class="aluralogo"></a>
+                    <a href="https://www.linkedin.com/in/arrazola-marquez/"><img src="Imagenes/linkedin.png" alt="Mi linkedin" class="linkedlogo"></a>
+                    <a href="https://github.com/Arrazola047"><img src="Imagenes/github.png" alt="Mi Github" class="gitlogo"></a>
+                </div>
+            </header>
+            <div class="cuadroTexto" id="cdtxt">
+                <textarea type="text" id="cuadro" cols="25" rows="15" class="input" required placeholder="Ingrese el texto aquí" autofocus></textarea>           
+                <div class="botones">
+                    <button type="button" onclick="encriptar()" class="encriptar" id="enc">Encriptar</button>
+                    <button type="button" onclick="desencriptar()" class="desencriptar" id="desen">Desencriptar</button>
+                </div>
+                <div class="alert">
+                    &#9888; Solo letras minúsculas y sin acentos
+                </div>
             </div>
-        </header>
-        <div class="cuadroTexto" id="cdtxt">
-            <!--
-            <input type="text" id="cuadro" cols="25" rows="15" class="input" required placeholder="Ingrese el texto aquí" autofocus>
-             -->
-            <textarea type="text" id="cuadro" cols="25" rows="15" class="input" required placeholder="Ingrese el texto aquí" autofocus></textarea>
-           
-        </div>
-        <script type="text/javascript" src="script.js"></script>
-        <div class="txtresuelo">
-           <!-- <textarea  id="resuelto" cols="30" rows="10" class="textoResuelto" required placeholder="0'"></textarea>  -->
-        </div>
-        <div class="txtcod">   
-            <div class="imgCuadro">
-                <img src="Imagenes/Muñeco.png" alt="Icono, no existe texto a (des)encriptar">
-            </div>
-            <div class="Frame">
-                <ul class="lista">
-                    <li> 
-                        <h2 class="txtResaltado">Ningún mensaje fue encontrado</h2>
-                        <p>Ingrese el texto que desea encriptar o desencriptar</p>
-                    </li>
-                </ul>
+            <div class="txtcod">   
+                <div class="imgCuadro">
+                    <img src="Imagenes/Muñeco.png" alt="Icono, no existe texto a (des)encriptar" id="imagenMuñeco">
+                </div>
+                <div class="Frame" id="mensajeInicio">
+                    <ul class="lista">
+                        <li> 
+                            <h2 class="txtResaltado" id="noTxt">Ningún mensaje fue encontrado</h2>
+                            <p id="parrafo">Ingrese el texto que desea encriptar o desencriptar</p>
+                        </li>
+                    </ul>
+                    <textarea name="mensaje" id="mensaje" cols="30" rows="10" class="mensaje"></textarea>
+                </div>
             </div>
         </div>
-        <div class="botones">
-            <button type="button" onclick="encriptar()" class="encriptar" id="enc">Encriptar</button>
-            <button type="button" class="desencriptar" id="desen">Desencriptar</button>
-            <script>
-                /*
-                function encriptar(){
-
-                    var texto = document.getElementById("cuadro").value.toLowerCase();
-
-                    var encriptado = texto.replace(/a/img,"ai");
-                    var encriptado = encriptado.replace(/e/img,"enter");
-                    var encriptado = encriptado.replace(/i/img,"imes");
-                    var encriptado = encriptado.replace(/o/img,"ober");
-                    var encriptado = encriptado.replace(/u/img,"ufat");
-
-                    document.getElementById(resuelto).innerHTML = encriptado;
-}
-                var boton = document.querySelector("#enc");
-                boton.onclick = encriptar;
-
-                var botond = document.querySelector("#desen")
-                botond.onclick = desencriptar;*/
-            </script>
-        </div>
-        <div class="alert">
-            &#9888; Solo letras minúsculas y sin acentos
-        </div>
-        
     </body>
 </html>
