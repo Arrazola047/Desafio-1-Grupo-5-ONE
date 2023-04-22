@@ -4,14 +4,16 @@ body{
 }
 
 .contenedorGlobal{
-    background-color: black;
-    width: 100%;
+    background-color: #e5e5e5;
+    width: 100vw;
+    height: 100vh;
     /*
     max-width: 1000px;*/
     /*margin: 0 auto;*/ /*Se elimino para que no centre demasiado los objetos*/
     overflow:hidden;
 }
 
+/*                   - HEADER -                 */
 .logo{
     display: inline-block;
     padding: 15px;
@@ -86,10 +88,14 @@ body{
 }
 */
 
+/*              - Div 1: Entrada de texto y botones Encriptar/Desencriptar -            */
+
 .cuadroTexto{
+    position: absolute;
     display: inline-block;
     margin-top: 6%;
     margin-left: 13%;
+    height: 80%;
 }
 
 .input{
@@ -105,65 +111,11 @@ body{
     border: transparent;
     resize: none;
     outline: none;
+    height: 80%;
+    width: 100%;
 
 }
-
-.txtcod{
-
-    /* Cambie absolute por relative para que la pagina sea responsiva dependeiendo de en que dispositivo se use
-    aun no termino de configurarlo*/
-    display: inline-block;
-   /* position: absolute;*/
-    /*width: 400px;*/
-    height: 910px;
-    /*
-    left: auto;
-    right: 40px;
-    top: 40px;
-    */
-    margin-bottom: 40px;
-    background: #FFFFFF;
-    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
-    border-radius: 32px;
-}
-
-.imgCuadro{
-   /* position: absolute;*/
-    width: 336px;
-    height: 304px;
-    /*
-    left: 32px;
-    top: 243px;
-    */
-    margin-top: 50%;
-    margin-bottom: 32px;
-}
-
-.Frame{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 16px;
-
-   /* position: absolute;*/
-    width: 336px;
-    height: 122px;
-    left: 32px;
-    bottom: 243px;
-    }
-
-.lista{
-    text-align: center;
-}
-
-.txtResaltado{
-    font-size: large;
-    font-weight: bold;
-    padding-bottom: 16px;
-    padding-top: 16px;
-}
-
+            /* - div para ambos botones - */
 .botones{
     display: flex;
     flex-direction: row;
@@ -173,14 +125,16 @@ body{
 
     /*position: absolute;*/
     width: 680px;
+    /*
     height: 67px;
     left: auto;
     right: 520px;
-    top: 885px;
+    top: 885px;*/
+    margin-top: 10%;
 
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
-
+            /* - Boton encriptar - */
 .encriptar{
     font-size: large;
     color: #d8dfe8;
@@ -192,7 +146,7 @@ body{
     border: none;
     transition: transform 0.5s ease
 }
-
+            /* - Boton Desencriptar - */
 .desencriptar{
     font-size: large;
     color: #0A3871;
@@ -203,7 +157,7 @@ body{
     border:none;
     transition: transform 0.5s ease;
 }
-
+            /* - Animaciones hover y active - */
 .encriptar:hover{
     transform: scale(1.05);
 }
@@ -219,7 +173,7 @@ body{
 .desencriptar:active{
     transform: scale(1.15);
 }
-
+            /* - Advertisment: No ingresar texto en mayusculas ni acentos - */
 .alert{
     font-size: smaller;
     color: gray;
@@ -229,9 +183,112 @@ body{
     padding: 0px;
     gap: 8px;
     position: absolute;
-    width: 240px;
-    height: 18px;
-    left: auto;
-    right: 971px;
-    top: 851px;
+    width: 80%;
+    top: 85%;
+    left: 1.5%;
+}
+
+/*                  - Div 2: Recuadro blanco, aqui muestra nuestro texto Encriptado/Desencriptado o la imagen donde dice que no se encontro texto */
+
+
+            /* - Recuadro blanco que contiene todos los elementos - */
+.txtcod{
+
+    /* Cambie absolute por relative para que la pagina sea responsiva dependeiendo de en que dispositivo se use
+    aun no termino de configurarlo*/
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    width: 20%;
+    height: 90%;
+    left: 70%;
+    /*
+    right: 40px;
+    top: 40px;
+    
+    margin-bottom: 40px;
+    */
+    background: #FFFFFF;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+}
+                /*  - Div de la imagen- */
+.imgCuadro{
+    position: absolute;
+    width: 100%;
+    height: 40%;
+    /*
+    left: 32px;
+    top: 243px;
+    */
+    top: 15%;
+}
+                    /* - Imagen - */
+.imgMuneco{
+    position: absolute;
+    width: 90%;
+    height: auto;
+    margin-left: 7%;
+    top: 25%;
+}
+            /* - Frame donde esta el texto "no se encontro texto a encriptar" - */
+.Frame{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+
+    position: absolute;
+    width: 100%;
+    /*
+    height: 122px;
+    left: 32px;
+    bottom: 243px;
+    */
+    top: 60%;
+    }
+
+.lista{
+    text-align: center;
+}
+
+.txtResaltado{
+    font-size: large;
+    font-weight: bold;
+    padding-bottom: 16px;
+    padding-top: 16px;
+}
+
+            /* - Text area donde se imprimirá el texto encriptado/desencriptado - */
+
+.mensaje{
+    width: 80%;
+    font-size: 24px;
+    font-weight: 400;
+    color: #495057;
+    line-height: 150%;
+    height: 80%;
+    margin-top: 32px;
+}
+            /* - Botón de Copiar - */
+.copiar{
+    position: absolute;
+    font-size: large;
+    color: #0A3871;
+    background-color: #d8dfe8;
+    width: 80%;
+    height: 67px;
+    border-radius: 32px;
+    border:none;
+    transition: transform 0.5s ease;
+    top: 90%;
+}
+            /* - Animaciones de boton copiar - */
+.copiar:hover{
+    transform: scale(1.05);
+}
+
+.copiar:active{
+    transform: scale(1.15);
 }

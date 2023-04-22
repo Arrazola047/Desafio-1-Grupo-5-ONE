@@ -32,17 +32,18 @@
             </div>
             <div class="txtcod">   
                 <div class="imgCuadro">
-                    <img src="Imagenes/Muñeco.png" alt="Icono, no existe texto a (des)encriptar" id="imagenMuñeco">
+                    <img src="Imagenes/Muñeco.png" alt="Icono, no existe texto a (des)encriptar" id="imagenMuñeco" class="imgMuneco">
                 </div>
+                <textarea name="mensaje" id="mensaje" cols="30" rows="10" class="mensaje"></textarea>
                 <div class="Frame" id="mensajeInicio">
                     <ul class="lista">
                         <li> 
-                            <h2 class="txtResaltado" id="noTxt">Ningún mensaje fue encontrado</h2>
+                            <h2 class="txtResaltado" id="noTxt">Ningún mensaje encontrado</h2>
                             <p id="parrafo">Ingrese el texto que desea encriptar o desencriptar</p>
                         </li>
                     </ul>
-                    <textarea name="mensaje" id="mensaje" cols="30" rows="10" class="mensaje"></textarea>
                 </div>
+                <button type="button" onclick="copiarTxt()" class="copiar" id="copy">Copiar</button>
             </div>
         </div>
     </body>
