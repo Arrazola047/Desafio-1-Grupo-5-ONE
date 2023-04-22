@@ -293,6 +293,7 @@ body{
     transform: scale(1.15);
 }
 
+/*                  - Pie de pagina -                   */
 .piePagina{
     font-size: smaller;
     color: gray;
@@ -320,6 +321,7 @@ body{
         width: 100%;
     }
 
+    /*              - DIV 1: Text Area y botones encriptar/desencriptar -                   */
     .cuadroTexto{
         width: 80%;
         height: 70%;
@@ -338,8 +340,9 @@ body{
     .alert{
         width: 80%;
         left: 5%;
-        top: 83%;
+        top: 80%;
         font-size: 16px;
+        margin-top: 1%;
     }
 
     .botones{
@@ -350,6 +353,8 @@ body{
         */
         margin-top: 5%;
     }
+
+    /*                  - DIV 2: recuadro de texto encriptado y boton copiar -                  */
 
     .txtcod{
         width: 80%;
@@ -384,12 +389,21 @@ body{
         height: 20%;
     }
 
+    /*              - Pie de pagina -               */
     .piePagina{
         /*
         top: 107%;
         */
-        left: 40%;
-        margin-top: 13%;
+        left: 37%;
+        margin-top: 20%;
     }
     
+}
+
+@media (max-width: 1280px) and (min-width: 1250px){
+
+    .piePagina{
+        margin-top: 4%;
+        left: 40%;
+    }
 }
