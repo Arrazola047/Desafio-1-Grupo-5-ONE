@@ -1,4 +1,4 @@
-var textoentrada= document.getElementById("cuadro").value;
+var textoentrada= document.getElementById(".input").value;
 
 function encriptar(encriptado){
     console.log(textoentrada);

@@ -378,7 +378,7 @@ body{
     }
 
     .Frame{
-        top: 40%;
+        top: 0%;
         width: 100%;
         align-items: center;
     }
@@ -405,5 +405,70 @@ body{
     .piePagina{
         margin-top: 4%;
         left: 40%;
+    }
+}
+
+@media (max-width: 415px){
+    .alert{
+        margin-top: 0%;
+        width: 100%;
+    }
+
+    .input{
+        height: 75%;
+    }
+
+    .botones{
+        margin-top: 15%;
+    }
+
+    .txtcod{
+        top: 80%;
+    }
+
+    .piePagina{
+        left: 50%;
+    }
+
+    .Frame{
+        top: 0%;
+    }
+}
+
+@media (max-width: 375px){
+    .input{
+        height: 70%;
+    }
+
+    .alert{
+        top: 70%;
+    }
+    .txtcod{
+        top: 85%;
+    }
+
+    .piePagina{
+        left: 30%;
+        margin-top: 30%;
+    }
+
+    .mensaje{
+        width: 80%;
+    }
+}
+
+@media (max-width: 280px){
+    .botones{
+        gap: 2%;
+    }
+
+    .encriptar{
+        width:50%;
+        margin-right: 0%;
+
+    }
+
+    .desencriptar{
+        width: 50%;
     }
 }
