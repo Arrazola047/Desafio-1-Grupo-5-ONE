@@ -39,7 +39,11 @@ function encriptar(){
         document.getElementById("mensaje").style.visibility = "hidden";
         tituloMensaje.textContent = "Ningún mensaje encontrado";
         parrafo.textContent = "Ingrese el texto que desea encriptar o desencriptar";
-        alert("No se detecto texto a encriptar!");
+        Swal.fire(
+            'No hay texto que encriptar!',
+            'Por favor ingresa un texto',
+            'question'
+          )
     }
 }
 
@@ -81,7 +85,11 @@ function desencriptar(){
         document.getElementById("mensaje").style.visibility = "hidden";
         tituloMensaje.textContent = "Ningún mensaje encontrado";
         parrafo.textContent = "Ingrese el texto que desea encriptar o desencriptar";
-        alert("No se encontro texto a desencriptar!");
+        Swal.fire(
+            'No hay texto que desencriptar!',
+            'Por favor ingresa un texto',
+            'question'
+          )
     }
 }
 
@@ -90,4 +98,9 @@ function copiarTxt(){
 
     navigator.clipboard.writeText(texto);
     console.log("El texto copiado al portapapeles es: " + texto);
+    Swal.fire(
+        'Listo!',
+        'Texto copiado al portapapeles con exito',
+        'success'
+      )
 }
