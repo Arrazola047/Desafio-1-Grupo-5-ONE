@@ -164,6 +164,7 @@ body{
 
 .encriptar:active{
     transform: scale(1.15);
+   
 }
 
 .desencriptar:hover{
@@ -263,6 +264,7 @@ body{
             /* - Text area donde se imprimirá el texto encriptado/desencriptado - */
 
 .mensaje{
+    visibility: hidden;
     width: 80%;
     font-size: 24px;
     font-weight: 400;
@@ -273,6 +275,7 @@ body{
 }
             /* - Botón de Copiar - */
 .copiar{
+    visibility: hidden;
     position: absolute;
     font-size: large;
     color: #0A3871;
@@ -378,7 +381,7 @@ body{
     }
 
     .Frame{
-        top: 0%;
+        top: 35%;
         width: 100%;
         align-items: center;
     }
@@ -431,7 +434,7 @@ body{
     }
 
     .Frame{
-        top: 0%;
+        top: 30%;
     }
 }
 

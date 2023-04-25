@@ -1,22 +1,84 @@
-var textoentrada= document.getElementById(".input").value;
+function encriptar(){
+    let texto = document.getElementById("input").value.toLowerCase();
+    console.log("El valor capturado es: " + texto);
+    let parrafo = document.getElementById("parrafo");
+    let tituloMensaje =document.getElementById("noTxt");
+    let muñeco = document.getElementById("imagenMuneco");
 
-function encriptar(encriptado){
-    console.log(textoentrada);
-    var encriptado = textoentrada.replace(/ai/img,"a")
-    encriptado = textoentrada.replaceAll("a","ai");
-    console.log(encriptado);
+    /*
+    let textoCifrado = texto.replace(/a/gi, "ai")
+                            .replace(/e/gi, "enter")
+                            .replace(/i/gi, "imes")
+                            .replace(/o/gi, "ober")
+                            .replace(/u/gi, "ufat");
+    */
+    
+    /*Se encontro un bug, el texto obtenido se ecnripta a si mismo
+    Ej: al poner asd -  encripta aimessd - ai luego encuentra la i y coloca mes*/ 
 
-    document.getElementById("resuelto").innerHTML = encriptado;
+    let textoCifrado = texto
+                            .replace(/e/gi, "enter")
+                            .replace(/i/gi, "imes")
+                            .replace(/a/gi, "ai")
+                            .replace(/o/gi, "ober")
+                            .replace(/u/gi, "ufat");
+
+    if(texto.length != 0){
+        texto = textoCifrado;
+        console.log("El texto cifrado es: " + textoCifrado);
+        tituloMensaje.textContent = "";
+        parrafo.textContent = "";
+        document.getElementById("imagenMuneco").style.visibility = "hidden";
+        document.getElementById("copy").style.visibility = "visible";
+        document.getElementById("mensaje").style.visibility = "visible";
+    }
+    else{
+        document.getElementById("imagenMuneco").style.visibility = "visible";
+        document.getElementById("copy").style.visibility = "hidden";
+        document.getElementById("mensaje").style.visibility = "hidden";
+        tituloMensaje.textContent = "Ningún mensaje encontrado";
+        parrafo.textContent = "Ingrese el texto que desea encriptar o desencriptar";
+        alert("No se detecto texto a encriptar!");
+    }
 }
 
 function desencriptar(){
     var texto = document.getElementById("input").value.toLowerCase();
+    console.log("El valor capturado es: " + texto);
+    let parrafo = document.getElementById("parrafo");
+    let tituloMensaje =document.getElementById("noTxt");
+    /*
+    let muñeco = document.getElementById("imagenMuneco");
+    /*
+    var textoDes = texto.replace(/ai/gi,"a")
+                        .replace(/enter/gi,"e")
+                        .replace(/imes/gi,"i")
+                        .replace(/ober/gi,"o")
+                        .replace(/ufat/gi,"u"); 
+    */
 
-    var desencriptado = texto.replace(/ai/img,"a"); 
-    var desencriptado = desencriptado.replace(/enter/img,"e");
-    var desencriptado = desencriptado.replace(/imes/img,"i");
-    var desencriptado = desencriptado.replace(/ober/img,"o");
-    var desencriptado = desencriptado.replace(/ufat/img,"u");
+    let textoDes = texto
+                            .replace(/enter/gi, "e")
+                            .replace(/imes/gi, "i")
+                            .replace(/ai/gi, "a")
+                            .replace(/ober/gi, "o")
+                            .replace(/ufat/gi, "u");
 
-    document.getElementById("resuelto").innerHTML = desencriptado;
+    if(texto.length != 0){
+        texto = textoDes;
+        console.log("El texto descifrado es: " + textoDes);
+        tituloMensaje.textContent = "";
+        parrafo.textContent = "";
+        document.getElementById("imagenMuneco").style.visibility = "hidden";
+        document.getElementById("copy").style.visibility = "visible";
+        document.getElementById("mensaje").style.visibility = "visible";
+    }
+    else{
+        document.getElementById("imagenMuneco").style.visibility = "visible";
+        document.getElementById("copy").style.visibility = "hidden";
+        document.getElementById("mensaje").style.visibility = "hidden";
+        tituloMensaje.textContent = "Ningún mensaje encontrado";
+        parrafo.textContent = "Ingrese el texto que desea encriptar o desencriptar";
+        alert("No se encontro texto a desencriptar!");
+    }
 }
