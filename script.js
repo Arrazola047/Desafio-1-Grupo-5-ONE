@@ -31,6 +31,7 @@ function encriptar(){
         document.getElementById("imagenMuneco").style.visibility = "hidden";
         document.getElementById("copy").style.visibility = "visible";
         document.getElementById("mensaje").style.visibility = "visible";
+        document.getElementById("mensaje").value = textoCifrado;
     }
     else{
         document.getElementById("imagenMuneco").style.visibility = "visible";
@@ -72,6 +73,7 @@ function desencriptar(){
         document.getElementById("imagenMuneco").style.visibility = "hidden";
         document.getElementById("copy").style.visibility = "visible";
         document.getElementById("mensaje").style.visibility = "visible";
+        document.getElementById("mensaje").value = textoDes;
     }
     else{
         document.getElementById("imagenMuneco").style.visibility = "visible";
@@ -81,4 +83,11 @@ function desencriptar(){
         parrafo.textContent = "Ingrese el texto que desea encriptar o desencriptar";
         alert("No se encontro texto a desencriptar!");
     }
+}
+
+function copiarTxt(){
+    let texto = document.getElementById("mensaje").value;
+
+    navigator.clipboard.writeText(texto);
+    console.log("El texto copiado al portapapeles es: " + texto);
 }

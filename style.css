@@ -272,6 +272,11 @@ body{
     line-height: 150%;
     height: 80%;
     margin-top: 32px;
+    background:transparent;
+    border: transparent;
+    resize: none;
+    outline: none;
+    
 }
             /* - Botón de Copiar - */
 .copiar{
